@@ -1,29 +1,22 @@
 package main
 
 import (
-	"fmt"
-	"steemit/data_structures"
+	"steemit/data_structures/lists"
+	//"fmt"
 )
 
 func main() {
-	q := data_structures.NewQueue(17)
+	list := lists.NewWithValues(11, 22, 33)
+	/*
+	list.Insert(1, 1, 2, 3)
+	list.Print()
 
-	for i := 10; i < 15; i++ {
-		q.Enqueue(i)
-	}
+	fmt.Println()
+	list.Remove(3)
 
-	q.Print()
+	list.Print()
+	*/
+	list.Append(1, 2, 3)
+	list.Print()
 
-	fmt.Println("********")
-
-	q.Dequeue()
-	q.Dequeue()
-
-	q.Print()
-	fmt.Println("********")
-
-	q.Enqueue(15)
-
-	q.Print()
-	fmt.Println("********")
 }
